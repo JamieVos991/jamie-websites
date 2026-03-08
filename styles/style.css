@@ -1,0 +1,73 @@
+/* style.css */
+
+header {
+}
+
+main {
+  padding: 1rem;
+
+  section {
+    height: 100vh;
+
+    &:nth-of-type(1) {
+      display: grid;
+      place-content: center;
+      padding: 2rem;
+
+      h1.h1-font {
+        display: inline;
+        line-height: 1.5;
+
+        img.icon {
+          display: inline-block;
+          width: 0; /* startbreedte 0 zodat er geen witruimte is */
+          opacity: 0; /* start onzichtbaar */
+          vertical-align: middle;
+          margin: 0 0.2rem;
+
+          animation: pop 0.5s forwards;
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      background-color: green;
+    }
+
+    &:nth-of-type(3) {
+      background-color: blue;
+    }
+
+    &:nth-of-type(4) {
+      background-color: aquamarine;
+    }
+  }
+}
+
+footer {
+}
+
+/* Animatie: van width 0 → 3rem, tekst schuift mee */
+@keyframes pop {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  60% {
+    width: 3.3rem; /* iets groter voor pop-effect */
+    opacity: 1;
+  }
+  100% {
+    width: 3rem;
+    opacity: 1;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  main section:nth-of-type(1) h1 img.icon {
+    animation: none;
+    width: 3rem;
+    opacity: 1;
+  }
+}
