@@ -30,7 +30,7 @@
 
   --font-size-h1: clamp(2rem, 5vw, 8rem);
   --font-size-h2: 1.8rem;
-  --font-size-h3: 1.6rem;
+  --font-size-h3: 1rem;
   --font-size-h4: 2rem;
   --font-size-p: 1.05rem;
   --font-size-ul: 1rem;
@@ -94,6 +94,7 @@ ul {
   border-radius: 2rem;
   background: none;
   border: 1px solid black;
+  color: black;
 }
 
 .button-licht {
