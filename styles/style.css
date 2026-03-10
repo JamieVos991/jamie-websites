@@ -78,6 +78,13 @@ main {
             justify-content: space-between;
             position: relative;
 
+            opacity: 0;
+            transform: translateY(3rem);
+
+            animation: article-fade 1s forwards;
+            animation-timeline: view();
+            animation-range: entry 0% entry 150%;
+
             h4:after {
               content: "p/m";
               margin-left: 0.1rem;
@@ -145,6 +152,18 @@ main {
   100% {
     width: 3rem;
     opacity: 1;
+  }
+}
+
+@keyframes article-fade {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
