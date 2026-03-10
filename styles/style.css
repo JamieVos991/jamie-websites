@@ -31,6 +31,14 @@ main {
       hgroup {
         display: grid;
         gap: 1rem;
+
+        h2 {
+          opacity: 0;
+
+          animation: slide-title 1s linear forwards;
+          animation-timeline: view();
+          animation-range: entry 0% entry 300%;
+        }
       }
     }
 
@@ -81,6 +89,12 @@ main {
           li {
             display: grid;
             gap: 1rem;
+
+            h4:after {
+              content: "p/m";
+              margin-left: 0.1rem;
+              font-size: 0.8rem;
+            }
           }
         }
 
@@ -88,10 +102,15 @@ main {
           height: 45%;
           display: grid;
 
+          li:nth-of-type(1) {
+            font-weight: 600;
+          }
+
           li {
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 0.9rem;
           }
         }
 
@@ -112,12 +131,7 @@ main {
               filter: brightness(0) invert(1);
             } */
 
-        /* h4:after {
-              content: "p/m";
-              margin-left: 0.1rem;
-              font-weight: normal;
-              font-size: 0.8rem;
-            } */
+        /* */
       }
 
       &:nth-of-type(4) {
@@ -172,6 +186,16 @@ main {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slide-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 

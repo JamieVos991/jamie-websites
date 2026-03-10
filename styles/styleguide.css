@@ -55,6 +55,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .p-span {
   color: brown;
 }
@@ -98,20 +102,22 @@ ul {
 }
 
 .button-donker {
-  font-family: var(--font-family-monospace);
   padding: 0.6rem 2rem;
   border-radius: 2rem;
   background: none;
   border: 1px solid black;
   color: black;
+  width: fit-content;
+  font-size: 0.8rem;
 }
 
 .button-licht {
-  font-family: var(--font-family-monospace);
   color: var(--kleur-lichtwit);
   border: 1px solid var(--kleur-lichtwit);
 
   padding: 0.6rem 2rem;
   border-radius: 2rem;
+  width: fit-content;
+  font-size: 0.8rem;
   background: none;
 }
