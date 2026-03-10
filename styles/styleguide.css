@@ -26,17 +26,18 @@
   --font-family-zodiak: "Zodiak";
   --font-family-gillsans: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
+  --font-family-inter: inter;
   --font-family-monospace: monospace;
 
   --font-size-h1: clamp(2rem, 5vw, 8rem);
   --font-size-h2: 1.8rem;
-  --font-size-h3: 1rem;
+  --font-size-h3: 1.5rem;
   --font-size-h4: 2rem;
-  --font-size-p: 1.05rem;
+  --font-size-p: 1rem;
   --font-size-ul: 1rem;
 
   --line-height-heading: 1.5;
-  --line-height-p: 1.6;
+  --line-height-p: 1.7;
 
   --kleur-lichtwit: hsl(0, 0%, 96%);
   --kleur-lichtblauw: hwb(208 51% 22%);
@@ -46,8 +47,16 @@
 
 p {
   line-height: var(--line-height-p);
-  font-family: var(--font-family-monospace);
+  font-family: var(--font-family-inter);
   font-size: var(--font-size-p);
+}
+
+ul {
+  list-style: none;
+}
+
+.p-span {
+  color: brown;
 }
 
 h1,
@@ -63,7 +72,7 @@ button {
 }
 
 ul {
-  font-family: var(--font-family-monospace);
+  font-family: var(--font-family-inter);
   font-size: var(--font-size-ul);
 }
 
