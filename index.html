@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vos Creative Studio</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/styleguide.css" />
+    <link rel="stylesheet" href="styles/footer.css">
     <script type="module" src="./scripts/script.js"></script>
   </head>
   <body>
@@ -22,57 +23,86 @@
         </h1>
       </section>
       <section>
-        <h2 class="h2-font">Over ons</h2>
-        <p>Wij geloven dat digitale ervaringen voor iedereen toegankelijk moeten zijn. Websites en applicaties horen eenvoudig te gebruiken te zijn, ongeacht apparaat, ervaring of beperking.</p>
+        <hgroup>
+            <h2 class="h2-font">Over ons</h2>
+            <p>Wij geloven dat digitale ervaringen voor iedereen toegankelijk moeten zijn. Websites en applicaties horen eenvoudig te gebruiken te zijn, ongeacht apparaat, ervaring of beperking.</p>
+        </hgroup>
         <p>Van duidelijke knoppen en makkelijk leesbare teksten, tot kleuren die goed zichtbaar zijn en ondersteuning voor hulpmiddelen zoals schermlezers – alles wordt zo gemaakt dat niemand problemen heeft om de website te gebruiken.</p>
     </section>
       <section>
-        <h2 class="h2-font">Onze diensten</h2>
-        <p>Van basic tot premium, elk pakket garandeert een website die voor iedereen werkt.</p>
-        <article>
-            <h3 class="h3-font">Basis</h3>
-            <h4 class="h4-font per-maand">€39,99</h4>
-            <p>Lorem</p>
-            <ul>
-                <li>Eenvoudige website (1-3 pagina's)</li>
-                <li>Toegankelijke design</li>
-                <li>Mobielvriendelijk</li>
-                <li>Ondersteuning via e-mail</li>
-            </ul>
-            <button>asd</button>
-        </article>
-        <article>
-            <h3 class="h3-font">Standaard</h3>
-            <h4 class="h4-font per-maand">€54,99</h4>
-            <p>Lorem</p>
-            <ul>
-                <li>Alles uit Basis</li>
-                <li>Tot 5 pagina’s</li>
-                <li>Interactieve elementen (bijv. formulieren)</li>
-                <li>Kleine updates & onderhoud</li>
-            </ul>
-            <button>asd</button>
-        </article>
-        <article>
-            <h3 class="h3-font">Premium</h3>
-            <h4 class="h4-font per-maand">€64,99</h4>
-            <p>Lorem</p>
-            <ul>
-                <li>Alles uit Standaard</li>
-                <li>Oneidig pagina's</li>
-                <li>Animaties & visuele effecten</li>
-                <li>Prioritaire ondersteuning & updates</li>
-                <li>Optimalisatie voor snelheid en SEO</li>
-            </ul>
-            <button>asd</button>
-        </article>
+        <hgroup>
+            <h2 class="h2-font">Onze diensten</h2>
+            <p>Van basic tot premium, elk pakket garandeert een website die voor iedereen werkt.</p>
+        </hgroup>
+        <ul class="ul-articles">
+            <li>
+                <article>
+                    <h3 class="h3-font">Basis plan</h3>
+                    <h4 class="h4-font per-maand">€39,99</h4>
+                    <ul class="ul-prijs">
+                        <li>Eenvoudige website (1-3 pagina's) of one pager.</li>
+                        <li>Mobielvriendelijk</li>
+                        <li>Onderhoud & updates</li>
+                        <li>Mobielvriendelijk</li>
+                        <li>Basis SEO instellingen</li>
+                        <li>Snelle laadtijd</li>
+                    </ul>
+                    <button class="button-donker">Kies het basis plan</button>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h3 class="h3-font">Standaard plan</h3>
+                    <h4 class="h4-font per-maand">€54,99</h4>
+                    <ul class="ul-prijs">
+                        <li>Alles uit Basis</li>
+                        <li>Tot 5 pagina’s</li>
+                        <li>Hosting</li>
+                        <li>Interactieve elementen (bijv. formulieren)</li>
+                        <li>Betere SEO optimalisatie</li>
+                        <li>Betere layout en visuele secties</li>
+                    </ul>
+                    <button class="button-donker">Kies het standaard plan</button>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h3 class="h3-font">Premium plan</h3>
+                    <h4 class="h4-font per-maand">€64,99</h4>
+                    <ul class="ul-prijs">
+                        <li>Alles uit Standaard</li>
+                        <li>Oneidig pagina's</li>
+                        <li>Animaties & visuele effecten</li>
+                        <li>Prioritaire ondersteuning & updates</li>
+                        <li>Maatwerk design</li>
+                        <li>Optimalisatie voor snelheid en SEO</li>
+                    </ul>
+                    <button class="button-licht">Kies het premium plan</button>
+                </article>
+            </li>
+        </ul>
       </section>
       <section>
-        <h2 class="h2-font">
-            Waarom wij?
-        </h2>
+        <hgroup>
+            <h2 class="h2-font">
+                Waarom wij?
+            </h2>
+            <p>Bij ons staat kwaliteit en persoonlijke service centraal. We luisteren naar jouw wensen en denken actief mee om tot de beste oplossing te komen. Met een duidelijke aanpak, eerlijke prijzen en snelle communicatie zorgen we ervoor dat je precies krijgt wat je nodig hebt. Zo kun je vertrouwen op een resultaat waar je echt tevreden mee bent.</p>
+        </hgroup>
+      </section>
+      <section>
+        <hgroup>
+          <h2 class="h2-font">WCAG</h2>
+        <p>Wij bouwen websites volgens de richtlijnen van WCAG (Web Content Accessibility Guidelines). Deze internationale standaard zorgt ervoor dat websites toegankelijk zijn voor iedereen. </p>
+        <p>Voor veel organisaties is het tegenwoordig verplicht om aan deze richtlijnen te voldoen. Door rekening te houden met WCAG zorgen we ervoor dat jouw website niet alleen wettelijk in orde is, maar ook voor een grotere en inclusieve doelgroep toegankelijk blijft.</p>
+        </hgroup>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <img src="./assets/fotos/code-icoon.png" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d154497.23364888577!2d4.7644462!3d52.7679262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam!5e0!3m2!1snl!2snl!4v1773065473461!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>Jamievos100@gmail.com</p>
+    </footer>
   </body>
 </html>

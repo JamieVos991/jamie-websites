@@ -1,0 +1,18 @@
+footer {
+  background-color: var(--kleur-lichtwit);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+
+  img {
+    width: 4rem;
+    mix-blend-mode: darken;
+  }
+
+  iframe {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1rem;
+  }
+}
