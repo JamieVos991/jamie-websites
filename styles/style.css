@@ -133,6 +133,7 @@ main {
 
         /* */
       }
+    }
 
       &:nth-of-type(4) {
         padding: 6rem 1.5rem;
@@ -159,7 +160,6 @@ main {
         }
       }
     }
-  }
 }
 
 @keyframes pop {
