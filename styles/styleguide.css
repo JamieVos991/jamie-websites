@@ -43,6 +43,7 @@
   --kleur-lichtblauw: hwb(208 51% 22%);
   --kleur-lichtgroen: hsl(71, 26%, 62%);
   --kleur-donkergroen: hsl(0, 0%, 17%);
+  --kleur-bruin: hsl(0, 59%, 41%);
 }
 
 p {
@@ -61,7 +62,7 @@ a {
 }
 
 .p-span {
-  color: brown;
+  color: var(--kleur-bruin);
 }
 
 h1,

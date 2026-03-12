@@ -1,0 +1,41 @@
+main {
+    padding: 1.5rem;
+}
+
+form {
+    font-family: var(--font-family-inter);
+    display: grid;
+    border: 1px solid black;
+    padding: 1rem;
+    gap: 2rem;
+    
+    fieldset {
+        border: none;
+        display: grid;
+        gap: 1rem;
+
+        legend {
+            font-family: var(--font-family-zodiak);
+            padding-bottom: 1rem    ;
+        }
+
+        .label-required {
+            display: flex;
+            gap: .3rem;
+
+            &::after {
+                content: '*';
+                font-size: .8rem;
+                gap: 1rem;
+                color: var(--kleur-bruin);
+            }
+        }
+      
+        input {
+            padding: .6rem .5rem;
+            border: none;
+            background: rgb(234, 234, 234);
+        }
+
+    }
+}

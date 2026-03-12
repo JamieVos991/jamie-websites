@@ -18,7 +18,7 @@
     position: relative;
 
     label {
-      background-color: white;
+      background-color: var(--kleur-lichtwit);
       outline: 10px solid black;
       display: block;
       margin: 0.5em 0.5em 0.5em -0.5em;
@@ -38,8 +38,8 @@
 
       p:nth-of-type(1) {
         font-size: 0.75em;
-        background-color: brown;
-        color: white;
+        background-color: var(--kleur-bruin);
+        color: var(--kleur-lichtwit);
         display: inline-block;
         margin-bottom: 1.2em;
         padding: .2rem 1rem

@@ -18,26 +18,55 @@
   <link rel="stylesheet" href="styles/form.css">
   
   <!-- Scripts -->
-  <script type="module" src="./scripts/script.js"></script>
+  <script type="module" src="scripts/form.js"></script>
 </head>
-  <body>
-    <main>
-      <form id="contactForm">
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
+<body>
+  <main>
+    <form id="contactForm">
+      
+      <!-- Persoonlijke info -->
+      <fieldset>
+        <legend>Persoonlijke informatie</legend>
+        
+        <label class="label-required" for="naam">Naam</label>
+        <input id="naam" type="text" name="name" required />
 
-        <label>
-          Naam
-          <input type="text" name="name" required />
-        </label>
+        <label class="label-required" for="email">E-mail</label>
+        <input id="email" type="email" name="email" required />
 
-        <p>Kies een plan</p>
+        <label class="label-required" for="telefoon">Telefoon</label>
+        <input id="telefoon" type="tel" name="phone" />
+      </fieldset>
 
+      <!-- Bedrijf & huidige website -->
+      <fieldset>
+        <legend>Over jou / organisatie</legend>
+        
+        <label for="bedrijf">Bedrijf / Organisatie</label>
+        <input id="bedrijf" type="text" name="company" />
+
+        <label for="website">Huidige website</label>
+        <input id="website" type="url" name="currentWebsite" />
+
+        <label for="opmerkingen">Opmerkingen / extra info</label>
+        <textarea id="opmerkingen" name="message" rows="4" placeholder="Laat hier je opmerkingen achter..."></textarea>
+
+        <label for="bron">Hoe heb je ons gevonden?</label>
+        <select id="bron" name="source">
+          <option value="">Selecteer</option>
+          <option value="Google">Google</option>
+          <option value="Social Media">Social media</option>
+          <option value="Aanbeveling">Aanbeveling</option>
+          <option value="Anders">Anders</option>
+        </select>
+      </fieldset>
+
+      <!-- Plan selectie -->
+      <fieldset>
+        <legend>Kies een plan</legend>
         <label>
           <input type="radio" name="plan" value="Basis" required />
-          Basis
+          Start
         </label>
 
         <label>
@@ -49,11 +78,11 @@
           <input type="radio" name="plan" value="Premium" />
           Premium
         </label>
+      </fieldset>
 
-        <button type="submit">Verstuur</button>
-      </form>
+      <button type="submit">Verstuur</button>
+    </form>
 
-      <script src="./scripts/form.js"></script>
-    </main>
-  </body>
+  </main>
+</body>
 </html>
