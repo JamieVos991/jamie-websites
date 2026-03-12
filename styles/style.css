@@ -25,6 +25,8 @@ main {
       gap: 1rem;
     
         h2 {
+          opacity: 0;
+
           animation: slide-title 1s linear forwards;
           animation-timeline: view();
           animation-range: entry 0% entry 300%;
@@ -42,6 +44,7 @@ main {
         flex-direction: column;
         gap: .5rem;
 
+        opacity: 0;
         animation: article-fade 1s forwards;
         animation-timeline: view();
         animation-range: entry 0% entry 150%;
