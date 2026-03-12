@@ -1,6 +1,5 @@
 const form = document.getElementById("contactForm");
 
-// ✅ 1. Check query parameter en vink juiste radio aan
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const plan = params.get('plan');
@@ -15,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ✅ 2. Form submit functionaliteit
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -37,7 +35,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     alert("Form verzonden!");
-    form.reset(); // optioneel: form leegmaken na verzenden
+    form.reset();
   } catch (error) {
     console.error(error);
     alert("Er is iets misgegaan bij het verzenden.");
