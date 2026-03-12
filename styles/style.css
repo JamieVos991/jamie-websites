@@ -79,14 +79,9 @@ main {
               padding-bottom: .5rem;
             }
 
-            img {
-              width: 1.1rem;
-              margin-right: .5rem;
-              vertical-align: middle;
-            }
-
             svg {
               margin-right: .5rem;
+              width: 1.1rem;
             }
           }
 
@@ -162,7 +157,7 @@ main {
                 padding: .2rem 1rem
               }
         
-              h3 {
+              h3 { 
                 margin-bottom: .5em;
               }
             }
