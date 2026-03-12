@@ -37,5 +37,10 @@ form {
             background: rgb(234, 234, 234);
         }
 
+        input[type="radio"] {
+            width: 1rem;
+            height: 1rem;
+        }
+
     }
 }

@@ -232,9 +232,9 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  main section:nth-of-type(1) .icon {
+  section:nth-of-type(1) h1 .icon {
     animation: none;
-    width: 3rem;
     opacity: 1;
+    width: 3rem;
   }
 }
