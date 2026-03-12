@@ -27,7 +27,7 @@ main {
         h2 {
           opacity: 0;
 
-          animation: slide-title 1s linear forwards;
+          animation: title-slide 1s linear forwards;
           animation-timeline: view();
           animation-range: entry 0% entry 300%;
         }
@@ -221,7 +221,7 @@ footer {
   }
 }
 
-@keyframes slide-title {
+@keyframes title-slide {
   from {
     opacity: 0;
   }
