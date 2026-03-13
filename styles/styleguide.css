@@ -52,17 +52,14 @@ p {
   font-size: var(--font-size-p);
 }
 
-ul {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
   font-family: var(--font-family-inter);
 }
 
-.p-span {
+em {
   color: var(--kleur-bruin);
+  font-style: normal;
 }
 
 h1,

@@ -10,6 +10,18 @@ main {
       h1 {
         display: inline;
 
+        .icoon:nth-of-type(1) {
+          animation-delay: 0s;
+        }
+        
+        .icoon:nth-of-type(2) {
+          animation-delay: 0.4s;
+        }
+        
+        .icoon:nth-of-type(3) {
+          animation-delay: 0.8s;
+        }
+
         img {
           width: 0;
           opacity: 0;
@@ -53,14 +65,12 @@ main {
           padding-bottom: 1rem;
         }
 
-         h4 {
-            border-top: 1px solid black;
-            padding: 2rem 0 1rem 0;
+         p:nth-of-type(2) {
+            font-family: var(--font-family-zodiak), sans-serif;
+            font-size: var(--font-size-h4);
 
-            &:after {
-              content: "p/m";
-              margin-left: 0.1rem;
-              font-size: 0.8rem;
+            small {
+              font-size: .75rem;
             }
           }
 
@@ -73,15 +83,29 @@ main {
             display: grid;
             gap: .5rem;
             padding: 2rem 0 0;
+            list-style: none;
+            
+            li {
+              display: flex;
+              align-items: flex-start;
+              gap: .6rem;
 
-            li:first-child {
-              font-weight: 600;
-              padding-bottom: .5rem;
-            }
+              &::before {
+                content: "";
+                min-width: 1.3rem;
+                min-height: 1.3rem;
+                background: url("../assets/svg/checkmark-dark.svg") no-repeat center / contain;
+              }
 
-            svg {
-              margin-right: .5rem;
-              width: 1.1rem;
+              &:first-child::before {
+                display: none;
+              }
+              
+              &:first-child {
+                font-weight: 600;
+                padding-bottom: .5rem;
+                list-style: none;
+              }
             }
           }
 
@@ -96,6 +120,10 @@ main {
         &:nth-of-type(3) {
           background: var(--kleur-donkergroen);
           color: var(--kleur-lichtwit);
+
+          ul li::before {
+            background: url("../assets/svg/checkmark-light.svg") no-repeat center / contain;
+          }
         }
       }
     }
@@ -128,8 +156,9 @@ main {
         
           li {
             position: relative;
+            list-style: none;
         
-            label {
+            span {
               background-color: var(--kleur-lichtwit);
               outline: 10px solid black;
               display: block;
@@ -170,22 +199,13 @@ main {
 footer {
   background-color: var(--kleur-lichtwit);
   padding: 1.5rem;
-  
-  ul {
-    display: grid;
-    gap: 1rem;
 
-    li:first-of-type {
-      display: grid;
-      gap: 1rem;
-    }
+  p:nth-of-type(1) {
+    padding: 1rem 0;
+  }
 
-    li:last-of-type {
-      display: flex;
-      justify-content: space-between;
-      border-top: 1px solid black;
-      padding-top: 1rem;
-    }
+  a + a {
+    margin: 1rem;
   }
 
   img {
@@ -232,7 +252,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  section:nth-of-type(1) h1 .icon {
+  .icoon {
     animation: none;
     opacity: 1;
     width: 3rem;
