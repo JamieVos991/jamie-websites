@@ -1,4 +1,4 @@
-const form = document.getElementById("contactForm");
+const form = document.getElementById("contact-form");
 
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);

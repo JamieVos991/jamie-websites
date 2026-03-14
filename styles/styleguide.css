@@ -29,7 +29,7 @@
   --font-family-inter: inter;
   --font-family-monospace: monospace;
 
-  --font-size-h1: clamp(2rem, 5vw, 8rem);
+  --font-size-h1: clamp(2rem, 5vw, 4rem);
   --font-size-h2: 1.8rem;
   --font-size-h3: 1.5rem;
   --font-size-h4: 2rem;
@@ -50,6 +50,7 @@ p {
   line-height: var(--line-height-p);
   font-family: var(--font-family-inter);
   font-size: var(--font-size-p);
+  max-width: 35rem;
 }
 
 a {
@@ -68,6 +69,7 @@ h3,
 h4 {
   line-height: var(--line-height-heading);
   font-weight: normal;
+  max-width: 75rem;
 }
 
 button {
