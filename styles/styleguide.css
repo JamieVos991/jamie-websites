@@ -74,6 +74,8 @@ h4 {
 
 button {
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 ul {
@@ -121,4 +123,75 @@ ul {
   width: fit-content;
   font-size: 0.8rem;
   background: none;
+}
+
+:root {
+  --bg: hsl(0, 0%, 96%);
+  --bg-alt: hsl(0, 0%, 90%);
+  --text: hsl(0, 0%, 0%);
+  --border: hsl(0, 0%, 10%);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(0, 0%, 8%);
+    --bg-alt: hsl(0, 0%, 12%);
+    --text: hsl(0, 0%, 90%);
+    --border: hsl(0, 0%, 90%);
+    color-scheme: dark;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode */
+body.light-mode {
+  --bg: hsl(0, 0%, 96%);
+  --bg-alt: hsl(0, 0%, 90%);
+  --text: hsl(0, 0%, 0%);
+  --border: hsl(0, 0%, 10%);
+}
+
+/* Dark mode */
+body.dark-mode {
+  --bg: hsl(0, 0%, 8%);
+  --bg-alt: hsl(0, 0%, 12%);
+  --text: hsl(0, 0%, 90%);
+  --border: hsl(0, 0%, 90%);
+}
+
+#theme-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* standaard alles verbergen */
+.icon-sun,
+.icon-moon {
+  display: none;
+}
+
+/* light mode → maan tonen */
+body.light-mode .icon-moon {
+  display: block;
+  color: black;
+}
+
+/* dark mode → zon tonen */
+body.dark-mode .icon-sun {
+  display: block;
+}
+
+section {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--bg-alt);
 }

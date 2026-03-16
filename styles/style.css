@@ -1,3 +1,15 @@
+header {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+
+  nav {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
 section {
   display: grid;
   padding: 6rem 1.5rem;
