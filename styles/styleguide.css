@@ -40,9 +40,9 @@
   --line-height-p: 1.7;
 
   --kleur-lichtwit: hsl(0, 0%, 96%);
-  --kleur-lichtblauw: hwb(208 51% 22%);
-  --kleur-lichtgroen: hsl(71, 26%, 62%);
-  --kleur-donkergroen: hsl(0, 0%, 17%);
+  --kleur-lichtblauw: hsl(208, 38%, 65%, 0.3);
+  --kleur-lichtgroen: hsl(71, 26%, 62%, 0.3);
+  --kleur-donkergroen: hsl(0, 0%, 17%, 0.3);
   --kleur-bruin: hsl(0, 59%, 41%);
 }
 

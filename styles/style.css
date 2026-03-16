@@ -11,10 +11,13 @@ section {
       display: inline;
 
       .icoon {
-        animation: none;
+        width: clamp(3rem, 4vw, 4.5rem);
+        display: inline-block;
         vertical-align: middle;
-        opacity: 1;
-        width: 3rem;
+
+        @media (min-width: 1000px) {
+          width: 4rem;
+        }
 
         &:nth-of-type(1) {
           animation-delay: 0s;
@@ -50,85 +53,92 @@ section {
 
   &:nth-of-type(3) {
     gap: 2rem;
+    justify-content: center;
 
-    article {
-      padding: 2.5rem 1.5rem;
-      border-radius: 0.3rem;
+    hgroup {
+      display: grid;
+      place-content: center;
+      gap: 1rem;
+    }
+
+    div {
       display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      width: 100%;
-      max-width: 25rem;
+      flex-wrap: wrap;
+      gap: 2rem;
 
-      opacity: 0;
-      animation: article-fade 1s forwards;
-      animation-timeline: view();
-      animation-range: entry 0% entry 150%;
+      article {
+        padding: 2.5rem 1.5rem;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 25rem;
 
-      p {
-        padding-bottom: 1rem;
-      }
+        opacity: 0;
+        animation: article-fade 1s forwards;
+        animation-timeline: view();
+        animation-range: entry 0% entry 150%;
 
-      p:nth-of-type(2) {
-        font-family: var(--font-family-zodiak), sans-serif;
-        font-size: var(--font-size-h4);
-
-        small {
-          font-size: 0.75rem;
+        p {
+          padding-bottom: 1rem;
         }
-      }
 
-      a {
-        margin-bottom: 2rem;
-      }
+        p:nth-of-type(2) {
+          font-family: var(--font-family-zodiak), sans-serif;
+          font-size: var(--font-size-h4);
 
-      ul {
-        border-top: 1px solid black;
-        display: grid;
-        gap: 1rem;
-        padding: 2rem 0 0;
-        list-style: none;
-
-        li {
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
-
-          &::before {
-            content: "";
-            min-width: 1.3rem;
-            min-height: 1.3rem;
-            background: url("../assets/svg/checkmark-dark.svg") no-repeat center /
-              contain;
-          }
-
-          &:first-child::before {
-            display: none;
-          }
-
-          &:first-child {
-            font-weight: 600;
-            padding-bottom: 0.5rem;
-            list-style: none;
+          small {
+            font-size: 0.75rem;
           }
         }
-      }
 
-      &:nth-of-type(1) {
-        background: var(--kleur-lichtblauw);
-      }
+        a {
+          margin-bottom: 2rem;
+        }
 
-      &:nth-of-type(2) {
-        background: var(--kleur-lichtgroen);
-      }
+        ul {
+          border-top: 1px solid black;
+          display: grid;
+          gap: 1rem;
+          padding: 2rem 0 0;
+          list-style: none;
 
-      &:nth-of-type(3) {
-        background: var(--kleur-donkergroen);
-        color: var(--kleur-lichtwit);
+          li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
 
-        ul li::before {
-          background: url("../assets/svg/checkmark-light.svg") no-repeat center /
-            contain;
+            &::before {
+              content: "";
+              min-width: 1.3rem;
+              min-height: 1.3rem;
+              background: url("../assets/svg/checkmark-dark.svg") no-repeat
+                center / contain;
+            }
+
+            &:first-child::before {
+              display: none;
+            }
+
+            &:first-child {
+              font-weight: 600;
+              padding-bottom: 0.5rem;
+              list-style: none;
+            }
+          }
+        }
+
+        &:nth-of-type(1) {
+          background: var(--kleur-lichtblauw);
+        }
+
+        &:nth-of-type(2) {
+          background: var(--kleur-lichtgroen);
+        }
+
+        &:nth-of-type(3) {
+          background: var(--kleur-donkergroen);
         }
       }
     }
@@ -137,10 +147,12 @@ section {
   &:nth-of-type(4) {
     gap: 1rem;
     background-color: var(--kleur-lichtwit);
+    justify-content: center;
   }
 
   &:nth-of-type(5) {
     gap: 1rem;
+    justify-content: center;
 
     .tijdlijn {
       margin: 4em auto 0;
@@ -203,12 +215,21 @@ footer {
   background-color: var(--kleur-lichtwit);
   padding: 1.5rem;
 
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+
   p:nth-of-type(1) {
     padding: 1rem 0;
   }
 
-  a + a {
-    margin: 1rem;
+  @media (max-width: 900px) {
+    a + a {
+      margin: 1rem;
+    }
   }
 
   img {
@@ -219,15 +240,20 @@ footer {
 
 @keyframes pop {
   0% {
-    width: 0;
+    transform: scale(0);
+    margin: 0 -0.5rem;
     opacity: 0;
   }
+
   60% {
-    width: 3.3rem;
+    transform: scale(1.15);
+    margin: 0 0.3rem;
     opacity: 1;
   }
+
   100% {
-    width: 3rem;
+    transform: scale(1);
+    margin: 0 0.2rem;
     opacity: 1;
   }
 }
@@ -256,9 +282,7 @@ footer {
 
 @media (prefers-reduced-motion: no-preference) {
   section:nth-of-type(1) h1 .icoon {
-    width: 3rem;
     opacity: 0;
-    vertical-align: middle;
     animation: pop 0.5s forwards;
   }
 }
