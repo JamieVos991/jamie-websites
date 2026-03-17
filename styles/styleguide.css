@@ -154,15 +154,15 @@ body.light-mode {
   --bg: hsl(0, 0%, 96%);
   --bg-alt: hsl(0, 0%, 90%);
   --text: hsl(0, 0%, 0%);
-  --border: hsl(0, 0%, 10%);
+  --border: hsl(0, 0%, 0%);
 }
 
 /* Dark mode */
 body.dark-mode {
   --bg: hsl(0, 0%, 8%);
   --bg-alt: hsl(0, 0%, 12%);
-  --text: hsl(0, 0%, 90%);
-  --border: hsl(0, 0%, 90%);
+  --text: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 80%);
 }
 
 #theme-toggle svg {
@@ -189,8 +189,12 @@ body.dark-mode .icon-sun {
 }
 
 footer {
-  background-color: var(--bg);
+  background-color: var(--bg-alt);
   color: var(--text);
+}
+
+ol::before {
+  background-color: var(--border);
 }
 
 section {
@@ -200,4 +204,9 @@ section {
 
 section:nth-of-type(even) {
   background-color: var(--bg-alt);
+}
+
+.tijdlijn li span {
+  outline: 10px solid var(--border) !important;
+  background-color: var(--bg) !important;
 }

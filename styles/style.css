@@ -172,7 +172,6 @@ section {
       max-width: 46em;
 
       &:before {
-        background-color: black;
         content: "";
         margin-left: -1px;
         position: absolute;
