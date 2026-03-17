@@ -185,6 +185,12 @@ body.light-mode .icon-moon {
 /* dark mode → zon tonen */
 body.dark-mode .icon-sun {
   display: block;
+  color: white;
+}
+
+footer {
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 section {
