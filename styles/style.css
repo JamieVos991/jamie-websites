@@ -94,6 +94,7 @@ section {
       gap: 2rem;
 
       article {
+        color: var(--c-article-text);
         padding: 2.5rem 1.5rem;
         border-radius: 0.3rem;
         display: flex;
