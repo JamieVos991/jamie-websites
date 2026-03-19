@@ -23,45 +23,99 @@
 }
 
 :root {
-  --font-family-zodiak: "Zodiak";
-  --font-family-gillsans: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
-  --font-family-inter: inter;
-  --font-family-monospace: monospace;
+  --ff-zodiak: "Zodiak", sans-serif;
+  --ff-inter: "inter", sans-serif;
 
-  --font-size-h1: clamp(2rem, 5vw, 4rem);
-  --font-size-h2: 1.8rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 2rem;
-  --font-size-p: 1rem;
-  --font-size-ul: 1rem;
+  --fs-h1: clamp(2rem, 5vw, 4rem);
+  --fs-h2: 1.8rem;
+  --fs-h3: 1.5rem;
+  --fs-p: 1rem;
+  --fs-button: 0.8rem;
+  --fs-article-p: 2rem;
+  --fs-article-small: 1rem;
+  --fs-label: 0.8rem;
 
-  --line-height-heading: 1.5;
-  --line-height-p: 1.7;
+  --lh-h: 1.5;
+  --lh-p: 1.7;
+  --border-r: 1rem;
 
-  --kleur-lichtwit: hsl(0, 0%, 96%);
-  --kleur-bruin: hsl(0, 59%, 41%);
-  --anchor-kleur: hsl(240, 96%, 80%);
+  --c-article-1: hsl(220, 72%, 31%);
+  --c-article-2: hsl(0, 59%, 41%);
+  --c-article-3: hsl(89, 95%, 20%);
+  --c-anchor: hsl(240, 96%, 80%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --c-bg: hsl(0, 0%, 96%);
+    --c-bg-alt: hsl(0, 0%, 90%);
+    --c-text: hsl(0, 0%, 0%);
+    --c-border: hsl(0, 0%, 0%);
+    --c-em: hsl(0, 59%, 41%);
+
+    --c-label-bg: hsl(0, 59%, 41%);
+    --c-label-text: hsl(0, 0%, 100%);
+    --c-outline-tijdlijn: hsl(0, 0%, 0%);
+    --c-span-tijdlijn: hsl(0, 0%, 1000%);
+
+    --c-icon: hsl(0, 0%, 0%);
+    color-scheme: ligh;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: hsl(0, 0%, 8%);
+    --c-bg-alt: hsl(0, 0%, 12%);
+    --c-text: hsl(0, 0%, 90%);
+    --c-border: hsl(0, 0%, 100%);
+    --c-em: hsl(71, 26%, 62%);
+
+    --c-label-bg: hsl(71, 26%, 62%);
+    --c-label-text: hsl(0, 0%, 0%);
+    --c-outline-tijdlijn: hsl(0, 0%, 100%);
+    --c-span-tijdlijn: hsl(0, 0%, 0%);
+
+    --c-icon: hsl(0, 0%, 100%);
+    color-scheme: dark;
+  }
+}
+
+/* Elementen */
+
+body {
+  background-color: var(--c-bg);
+  color: var(--c-text);
 }
 
 p {
-  line-height: var(--line-height-p);
-  font-family: var(--font-family-inter);
+  line-height: var(--lh-p);
+  font-family: var(--ff-inter);
   font-size: var(--font-size-p);
   max-width: 35rem;
 }
 
 a {
+  font-family: var(--ff-inter);
+  color: var(--c-anchor);
   text-decoration: none;
-  font-family: var(--font-family-inter);
-  color: var(--anchor-kleur);
+}
+
+em {
+  font-style: normal;
+  color: var(--c-em);
+}
+
+textarea {
+  padding: 0.5rem;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  line-height: var(--line-height-heading);
+  line-height: var(--lh-h);
+  font-family: var(--ff-zodiak);
   font-weight: normal;
   max-width: 75rem;
 }
@@ -70,159 +124,26 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  padding: 0.6rem 2rem;
+  width: fit-content;
+  border-radius: var(--border-r);
 }
 
 ul {
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-ul);
+  font-family: var(--ff-inter);
 }
 
+/* Classes */
+
 .h1-font {
-  font-size: var(--font-size-h1);
-  font-family: var(--font-family-zodiak), sans-serif;
+  font-size: var(--fs-h1);
   text-align: center;
 }
 
 .h2-font {
-  font-family: var(--font-family-zodiak), sans-serif;
-  font-size: var(--font-size-h2);
+  font-size: var(--fs-h2);
 }
 
 .h3-font {
-  font-family: var(--font-family-zodiak), sans-serif;
-  font-size: var(--font-size-h3);
-}
-
-.h4-font {
-  font-family: var(--font-family-zodiak), sans-serif;
-  font-size: var(--font-size-h4);
-}
-
-.button-donker {
-  padding: 0.6rem 2rem;
-  border-radius: 2rem;
-  background: none;
-  border: 1px solid black;
-  color: black;
-  width: fit-content;
-  font-size: 0.8rem;
-}
-
-.button-licht {
-  color: var(--kleur-lichtwit);
-  border: 1px solid var(--kleur-lichtwit);
-
-  padding: 0.6rem 2rem;
-  border-radius: 2rem;
-  width: fit-content;
-  font-size: 0.8rem;
-  background: none;
-}
-
-:root {
-  --bg: hsl(0, 0%, 96%);
-  --bg-alt: hsl(0, 0%, 90%);
-  --text: hsl(0, 0%, 0%);
-  --border: hsl(0, 0%, 10%);
-
-  --kleur-lichtblauw: hsl(208, 38%, 65%, 0.3);
-  --kleur-lichtgroen: hsl(71, 26%, 62%, 0.3);
-  --kleur-donkergroen: hsl(0, 0%, 17%, 0.3);
-
-  --em-kleur-light: hsl(0, 59%, 41%);
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: hsl(0, 0%, 8%);
-    --bg-alt: hsl(0, 0%, 12%);
-    --text: hsl(0, 0%, 90%);
-    --border: hsl(0, 0%, 90%);
-
-    --kleur-lichtblauw: hsl(208, 38%, 65%);
-    --kleur-lichtgroen: hsl(71, 26%, 62%);
-    --kleur-donkergroen: hsl(0, 7%, 43%);
-
-    --em-kleur-dark: hsl(71, 26%, 62%);
-    color-scheme: dark;
-  }
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Light mode */
-body.light-mode {
-  --bg: hsl(0, 0%, 96%);
-  --bg-alt: hsl(0, 0%, 90%);
-  --text: hsl(0, 0%, 0%);
-  --border: hsl(0, 0%, 0%);
-
-  --em-kleur: hsl(0, 59%, 41%);
-}
-
-/* Dark mode */
-body.dark-mode {
-  --bg: hsl(0, 0%, 8%);
-  --bg-alt: hsl(0, 0%, 12%);
-  --text: hsl(0, 0%, 100%);
-  --border: hsl(0, 0%, 80%);
-
-  --em-kleur: hsl(71, 26%, 62%);
-}
-
-em {
-  font-style: normal;
-  color: var(--em-kleur);
-}
-
-#theme-toggle svg {
-  width: 24px;
-  height: 24px;
-}
-
-.icon-sun,
-.icon-moon {
-  display: none;
-}
-
-body.light-mode .icon-moon {
-  display: block;
-  color: black;
-}
-
-body.dark-mode .icon-sun {
-  display: block;
-  color: white;
-}
-
-footer {
-  background-color: var(--bg-alt);
-  color: var(--text);
-}
-
-ol::before {
-  background-color: var(--border);
-}
-
-textarea {
-  padding: 0.5rem;
-}
-
-section {
-  background-color: var(--bg);
-  color: var(--text);
-}
-
-section:nth-of-type(even) {
-  background-color: var(--bg-alt);
-}
-
-.tijdlijn li span {
-  outline: 10px solid var(--border) !important;
-  background-color: var(--bg) !important;
+  font-size: var(--fs-h3);
 }
