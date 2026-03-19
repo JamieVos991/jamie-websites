@@ -141,7 +141,7 @@ section {
               content: "";
               min-width: 1.3rem;
               min-height: 1.3rem;
-              background: url("../assets/svg/checkmark-dark.svg") no-repeat
+              background: url("../assets/svg/checkmark-light.svg") no-repeat
                 center / contain;
             }
 
