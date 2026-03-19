@@ -40,10 +40,8 @@
   --line-height-p: 1.7;
 
   --kleur-lichtwit: hsl(0, 0%, 96%);
-  --kleur-lichtblauw: hsl(208, 38%, 65%, 0.3);
-  --kleur-lichtgroen: hsl(71, 26%, 62%, 0.3);
-  --kleur-donkergroen: hsl(0, 0%, 17%, 0.3);
   --kleur-bruin: hsl(0, 59%, 41%);
+  --anchor-kleur: hsl(240, 96%, 80%);
 }
 
 p {
@@ -56,6 +54,7 @@ p {
 a {
   text-decoration: none;
   font-family: var(--font-family-inter);
+  color: var(--anchor-kleur);
 }
 
 em {
@@ -130,6 +129,10 @@ ul {
   --bg-alt: hsl(0, 0%, 90%);
   --text: hsl(0, 0%, 0%);
   --border: hsl(0, 0%, 10%);
+
+  --kleur-lichtblauw: hsl(208, 38%, 65%, 0.3);
+  --kleur-lichtgroen: hsl(71, 26%, 62%, 0.3);
+  --kleur-donkergroen: hsl(0, 0%, 17%, 0.3);
   color-scheme: light;
 }
 
@@ -139,6 +142,10 @@ ul {
     --bg-alt: hsl(0, 0%, 12%);
     --text: hsl(0, 0%, 90%);
     --border: hsl(0, 0%, 90%);
+
+    --kleur-lichtblauw: hsl(208, 38%, 65%);
+    --kleur-lichtgroen: hsl(71, 26%, 62%);
+    --kleur-donkergroen: hsl(0, 7%, 43%);
     color-scheme: dark;
   }
 }
@@ -195,6 +202,10 @@ footer {
 
 ol::before {
   background-color: var(--border);
+}
+
+textarea {
+  padding: 0.5rem;
 }
 
 section {
