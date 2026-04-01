@@ -44,24 +44,7 @@
   --c-article-3: hsl(89, 95%, 20%);
   --c-article-text: hsl(0, 0%, 100%);
   --c-anchor: hsl(240, 96%, 80%);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --c-bg: hsl(0, 0%, 96%);
-    --c-bg-alt: hsl(0, 0%, 90%);
-    --c-text: hsl(0, 0%, 0%);
-    --c-border: hsl(0, 0%, 0%);
-    --c-em: hsl(0, 59%, 41%);
-
-    --c-label-bg: hsl(0, 59%, 41%);
-    --c-label-text: hsl(0, 0%, 100%);
-    --c-outline-tijdlijn: hsl(0, 0%, 0%);
-    --c-span-tijdlijn: hsl(0, 0%, 1000%);
-
-    --c-icon: hsl(0, 0%, 0%);
-    color-scheme: ligh;
-  }
+  --c-border: hsl(0, 0%, 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,6 +65,23 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --c-bg: hsl(0, 0%, 96%);
+    --c-bg-alt: hsl(0, 0%, 90%);
+    --c-text: hsl(0, 0%, 0%);
+    --c-border: hsl(0, 0%, 0%);
+    --c-em: hsl(0, 59%, 41%);
+
+    --c-label-bg: hsl(0, 59%, 41%);
+    --c-label-text: hsl(0, 0%, 100%);
+    --c-outline-tijdlijn: hsl(0, 0%, 0%);
+    --c-span-tijdlijn: hsl(0, 0%, 1000%);
+
+    --c-icon: hsl(0, 0%, 0%);
+    color-scheme: light;
+  }
+}
 /* Elementen */
 
 body {
@@ -103,8 +103,8 @@ a {
 }
 
 em {
-  font-style: normal;
   color: var(--c-em);
+  font-style: normal;
 }
 
 textarea {
@@ -121,15 +121,6 @@ h4 {
   max-width: 75rem;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  padding: 0.6rem 2rem;
-  width: fit-content;
-  border-radius: var(--border-r);
-}
-
 ul {
   font-family: var(--ff-inter);
 }
@@ -143,6 +134,7 @@ ul {
 
 .h2-font {
   font-size: var(--fs-h2);
+  margin-bottom: 1rem;
 }
 
 .h3-font {
