@@ -39,12 +39,11 @@
   --lh-p: 1.7;
   --border-r: 1rem;
 
-  --c-article-1: hsl(220, 72%, 31%);
-  --c-article-2: hsl(0, 59%, 41%);
-  --c-article-3: hsl(89, 95%, 20%);
-  --c-article-text: hsl(0, 0%, 100%);
   --c-anchor: hsl(240, 96%, 80%);
   --c-border: hsl(0, 0%, 100%);
+  --c-input-ster: hsl(0, 59%, 41%);
+  --c-article: hsl(71, 26%, 62%);
+  --c-article-text: hsl(0, 0%, 0%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,6 +60,8 @@
     --c-span-tijdlijn: hsl(0, 0%, 0%);
 
     --c-icon: hsl(0, 0%, 100%);
+
+    --c-input-bg: #333;
     color-scheme: dark;
   }
 }
@@ -79,6 +80,8 @@
     --c-span-tijdlijn: hsl(0, 0%, 1000%);
 
     --c-icon: hsl(0, 0%, 0%);
+
+    --c-input-bg: hsl(0, 0%, 92%);
     color-scheme: light;
   }
 }
@@ -109,6 +112,7 @@ em {
 
 textarea {
   padding: 0.5rem;
+  font-family: var(--f-family);
 }
 
 h1,
