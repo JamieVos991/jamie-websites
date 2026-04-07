@@ -122,7 +122,12 @@ h4 {
   line-height: var(--lh-h);
   font-family: var(--ff-zodiak);
   font-weight: normal;
-  max-width: 75rem;
+}
+
+h2,
+h3,
+h4 {
+  max-width: 35rem;
 }
 
 ul {
